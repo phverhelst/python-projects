@@ -96,6 +96,55 @@ def fighting (grp_units, is_attacking):
 
     return [total_damages, total_retreating_points, total_retreats]
 
+def show_units(grp_unit):
+    
+    for x in range(0, len(grp_unit)):
+        a = (grp_unit[x].strength)
+        print(x,a)
+
+def apply_dammages(grp_unit, damage_total):
+    show_units(grp_unit)
+    y = len(grp_unit)
+    # print(y)
+    
+    while True:
+        try:
+            x = int(input("Choose unit number: "))
+        except ValueError:
+            continue
+        if x >= y or x < 0:
+            continue
+        else:
+            break
+    unit_strength = grp_unit[x].strength
+    print("Strenght of the unit:", unit_strength)
+    
+    if damage_total > unit_strength:
+        damages_possible = unit_strength
+    else:
+        damages_possible = damage_total
+    print("Damages possible to assign:", damages_possible )
+    
+    while True:
+        try:
+            y = int(input("choose damages done to the unit: "))
+        except ValueError:
+            continue
+        if y > damages_possible or y <= 0:
+            continue
+        # elif y <= 0:
+        #     continue
+        else:
+            break
+    
+
+
+    
+
+def ending_round():
+    pass
+
+
 
 unit1 = Unit("infantry", 3, 1, "germany")
 unit2 = Unit("infantry", 4, 1, "germany")
@@ -104,12 +153,18 @@ unit4 = Unit("infantry", 5, 1, "poland")
 unit5 = Unit("infantry", 2, 1, "poland")
 unit6 = Unit("infantry", 4, 1, "poland")
 
-# units_grp1 =[unit1, unit2, unit3, unit1, unit2, unit3]
+units_grp1 =[unit1, unit2, unit3, unit1, unit2, unit3]
+# units_grp1 =[unit1, unit2]
 # units_grp2 =[unit4, unit5, unit6, unit4, unit5, unit6]
 
-units_grp1 =[unit1]
-units_grp2 =[unit4]
+# units_grp1 =[unit1]
+units_grp2 =[unit4, unit4]
 
-print(fighting(units_grp1, True))
-print(fighting(units_grp2, False))
+attacker = fighting(units_grp1, True)
+print("attacker",attacker)
+defender = fighting(units_grp2, False)
+print("defender", defender)
+show_units(units_grp1)
+
+apply_dammages(units_grp2, attacker[0])
 
