@@ -87,4 +87,5 @@ def show_units(grp_unit):
     
     for x in range(0, len(grp_unit)):
         a = (grp_unit[x].strength)
-        print(x,a)
+        b = (grp_unit[x].is_retreating)
+        print(x, a, b)
