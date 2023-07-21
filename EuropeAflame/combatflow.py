@@ -56,27 +56,21 @@ def apply_dammages(grp_unit, damage_total):
     # return [grp_unit[x].strength, is_unit_destroyed, damage_total]
     print([last_known_unit_strenght, is_unit_destroyed, damage_total])
 
-def apply_retreat_units(grp_unit, retreat_result):
+def apply_retreat_units(grp_unit, number_of_retreats):
     
     show_units(grp_unit)
     y = len(grp_unit)
-
-    while True:
-        try:
-            x = int(input("Choose unit number: "))
-        except ValueError:
-            continue
-        if x >= y or x < 0:
-            continue
-        else:
-            break
+    units_selected = []
     
-    grp_unit[x].is_retreating = True
-    retreat_result -= 1
+    while True:
+        z = input_a_value(y, units_selected)
+        units_selected.append(z)
+        number_of_retreats -= 1
+        if number_of_retreats == 0:
+            break
 
-
-    return [grp_unit[x], grp_unit[x].is_retreating, retreat_result]
-    # print ([grp_unit[x], grp_unit[x].is_retreating, retreat_result])
+    for w in units_selected:
+        grp_unit[w].is_retreating = True
 
 def remove_retreated_units(grp_unit):
     
@@ -95,12 +89,6 @@ def remove_retreated_units(grp_unit):
     z = len(unit_to_pop)
     for x in range(0, z):
         grp_unit.pop(x)
-
-
-
-
-
-    
 
 def ending_round():
     pass
@@ -145,13 +133,13 @@ units_grp2 =[unit11, unit12]
 
 # show_units(units_grp1)
 
-# apply_dammages(units_grp2, attacker[0])
+# apply_dammages(units_grp2, 20)
 
 # show_units(units_grp2)
 
-# apply_retreat_units(units_grp1, defender[2])
-# show_units(units_grp1)
+apply_retreat_units(units_grp1, 2)
+show_units(units_grp1)
 
 # remove_retreated_units(units_grp1)
 # show_units(units_grp1)
-apply_retreat_points(units_grp1, 10)
+# apply_retreat_points(units_grp1, 10)
