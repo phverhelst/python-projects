@@ -56,39 +56,7 @@ def apply_dammages(grp_unit, damage_total):
     # return [grp_unit[x].strength, is_unit_destroyed, damage_total]
     print([last_known_unit_strenght, is_unit_destroyed, damage_total])
 
-def apply_retreat_units(grp_unit, number_of_retreats):
-    
-    show_units(grp_unit)
-    y = len(grp_unit)
-    units_selected = []
-    
-    while True:
-        z = input_a_value(y, units_selected)
-        units_selected.append(z)
-        number_of_retreats -= 1
-        if number_of_retreats == 0:
-            break
 
-    for w in units_selected:
-        grp_unit[w].is_retreating = True
-
-def remove_retreated_units(grp_unit):
-    
-    show_units(grp_unit)
-    y = len(grp_unit)
-    print(y)
-
-    unit_to_pop = []
-
-    for x in reversed(range(0, y)):
-         if (grp_unit[x].is_retreating) == True:
-             unit_to_pop.append(x)
-
-    print(unit_to_pop)
-    
-    z = len(unit_to_pop)
-    for x in range(0, z):
-        grp_unit.pop(x)
 
 def ending_round():
     pass
