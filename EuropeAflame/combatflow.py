@@ -75,8 +75,8 @@ def apply_retreat_units(grp_unit, retreat_result):
     retreat_result -= 1
 
 
-    # return [grp_unit[x], grp_unit[x].is_retreating, retreat_result]
-    print ([grp_unit[x], grp_unit[x].is_retreating, retreat_result])
+    return [grp_unit[x], grp_unit[x].is_retreating, retreat_result]
+    # print ([grp_unit[x], grp_unit[x].is_retreating, retreat_result])
 
 def remove_retreated_units(grp_unit):
     
@@ -97,8 +97,9 @@ def remove_retreated_units(grp_unit):
         grp_unit.pop(x)
 
 
-def apply_retreat_points(grp_unit, retreat_result):
-    pass
+
+
+
     
 
 def ending_round():
@@ -126,20 +127,21 @@ unit15 = Unit("infantry", 2, 1, "poland", False)
 unit16 = Unit("infantry", 4, 1, "poland", False)
 
 
-# units_grp1 =[unit1, unit2, unit3, unit4, unit5, unit6]
+# units_grp1 =[unit1, unit2, unit3, unit4, unit5, unit6]1
 units_grp1 =[unit1, unit2, unit3, unit4]
 # units_grp1 =[unit1, unit2]
 # units_grp1 =[unit1]
+
 
 # units_grp2 =[unit11, unit12, unit13, unit14, unit15, unit6]
 # units_grp2 =[unit11, unit12, unit13, unit14]
 units_grp2 =[unit11, unit12]
 # units_grp2 =[unit11]
 
-attacker = fighting(units_grp1, True)
-print("attacker",attacker)
-defender = fighting(units_grp2, False)
-print("defender", defender)
+# attacker = fighting(units_grp1, True)
+# print("attacker",attacker)
+# defender = fighting(units_grp2, False)
+# print("defender", defender)
 
 # show_units(units_grp1)
 
@@ -150,5 +152,6 @@ print("defender", defender)
 # apply_retreat_units(units_grp1, defender[2])
 # show_units(units_grp1)
 
-remove_retreated_units(units_grp1)
-show_units(units_grp1)
+# remove_retreated_units(units_grp1)
+# show_units(units_grp1)
+apply_retreat_points(units_grp1, 10)
