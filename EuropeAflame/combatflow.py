@@ -97,14 +97,6 @@ def remove_retreated_units(grp_unit):
         grp_unit.pop(x)
 
 
-
-
-    
-    
-
-
-
-
 def apply_retreat_points(grp_unit, retreat_result):
     pass
     
