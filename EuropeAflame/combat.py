@@ -104,6 +104,20 @@ def input_a_value(len_of_grp_unit, list = []):
             break
     return(x)
 
+def simple_number_input(min_value, max_value):
+    print("Between",min_value,"and",max_value)
+    while True:
+        try:
+            x = int(input("Choose unit number: "))
+        except ValueError:
+            continue
+        if x > max_value or x < min_value:
+            continue
+        else:
+            break
+    return(x)
+
+
 def test_if_in_list(list_name, value_to_check):
 
     is_present = False
@@ -177,3 +191,14 @@ def remove_retreated_units(grp_unit):
     z = len(unit_to_pop)
     for x in range(0, z):
         grp_unit.pop(x)
+
+def damages_possible (unit_strength, damages_to_be_done):
+    
+    max_damages_possible = 0
+
+    if damages_to_be_done > unit_strength:
+        max_damages_possible = unit_strength
+    else:
+        max_damages_possible = damages_to_be_done
+    
+    return max_damages_possible

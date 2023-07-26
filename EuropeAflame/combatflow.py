@@ -4,64 +4,68 @@ import random
 from combat import *
 from gameparts import *
 
-def apply_dammages(grp_unit, damage_total):
+def apply_dammage_sequence(grp_unit, damage_total):
     
     show_units(grp_unit)
+    len_grp = len(grp_unit)
+    total_force_grp = 0
     
-    y = len(grp_unit)
-    # print(y)
+    combatting_units = []
+    for c in range(0, len_grp):
+        combatting_units.append(grp_unit[c].strenght)
+    print("combatting_units", combatting_units)
     
-    is_unit_destroyed = False
+    units_destroyed = []
 
-    while True:
-        try:
-            x = int(input("Choose unit number: "))
-        except ValueError:
-            continue
-        if x >= y or x < 0:
-            continue
-        else:
-            break
-    unit_strength = grp_unit[x].strength
-    print("Strenght of the unit:", unit_strength)
-    
-    if damage_total > unit_strength:
-        damages_possible = unit_strength
+    for y in range(0, len_grp):
+        total_force_grp = total_force_grp + grp_unit[y].strength
+
+    if damage_total >= total_force_grp:
+        for y in range(0, len_grp):
+            units_destroyed.append(y)
+
+    elif len_grp == 1:
+        grp_unit[0].strength = grp_unit[0].strength - damage_total
+        if grp_unit[0].strenght == 0:
+            units_destroyed.append(0)
+
     else:
-        damages_possible = damage_total
-    print("Damages possible to assign:", damages_possible )
-    
-    while True:
-        try:
-            z = int(input("choose damages done to the unit: "))
-        except ValueError:
-            continue
-        if z > damages_possible or z <= 0:
-            continue
-        # elif z <= 0:
-        #     continue
-        else:
-            break
+        print("end")
 
-    unit_strength = unit_strength - z
-    print("New total strenght of the unit:", unit_strength)
-    grp_unit[x].strength = unit_strength
-    last_known_unit_strenght = grp_unit[x].strength
-    if grp_unit[x].strength == 0 :
-        is_unit_destroyed = True
-        del grp_unit[x]
+        # while True:
+            
+        #     z = input_a_value(len_grp, units_selected)
+            
+        #     unit_strength = grp_unit[z].strength
+        #     print("Strenght of the unit:", unit_strength)
+            
+        #     a = damages_possible(grp_unit[z].strength, damage_total)
+        #     print("Damages possible to assign:", a )
+            
+        #     b = simple_number_input(1, a)
+        #     print("Damages assigned:", b )
+
+        #     unit_strength = unit_strength - b
+        #     print("New total strenght of the unit:", unit_strength)
+            
+        #     if unit_strength == 0:
+        #         grp_unit[x].strength = unit_strength
+        #         units_destroyed.append(x)
+        #     last_known_unit_strenght = grp_unit[x].strength
+
+        #     if grp_unit[x].strength == 0 :
+        #         is_unit_destroyed = True
+        # del grp_unit[x]
+    
+    print("units_destroyed", units_destroyed)
   
-    damage_total = damage_total - z
+    # damage_total = damage_total - z
 
     # return [grp_unit[x].strength, is_unit_destroyed, damage_total]
     print([last_known_unit_strenght, is_unit_destroyed, damage_total])
 
-
-
 def ending_round():
     pass
-
-
 
 # unit1 = Unit("infantry", 3, 1, "germany", True)
 # unit2 = Unit("infantry", 4, 1, "germany", True)
@@ -99,14 +103,13 @@ units_grp2 =[unit11, unit12]
 # defender = fighting(units_grp2, False)
 # print("defender", defender)
 
-# show_units(units_grp1)
-
-# apply_dammages(units_grp2, 20)
+show_units(units_grp2)
+# apply_dammage_sequence(units_grp2, 20)
 
 # show_units(units_grp2)
 
-apply_retreat_units(units_grp1, 2)
-show_units(units_grp1)
+# apply_retreat_units(units_grp1, 2)
+# show_units(units_grp1)
 
 # remove_retreated_units(units_grp1)
 # show_units(units_grp1)
