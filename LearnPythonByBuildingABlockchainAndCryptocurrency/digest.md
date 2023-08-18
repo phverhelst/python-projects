@@ -30,10 +30,6 @@ Use riche set of third-party packages
 Gather, import and clean data  
 Do statistical analyses, plotting, machine learning  
 
-
-
-
-
 ### What's a Blockchain?
 
 A distributed **data storage** consisting of **containers** (blocks) wich are **connected**.  
@@ -115,5 +111,55 @@ Float
 #### Modulus %
 5 % 10  
 5
+
+### Lists
+
+index   0   1   2   3  
+[ "some text",  12.9,   True,   ["nested!", 8]  ]  
+length = 4  
+
+### Our Blockchain
+
+The Chain
+[ [1], [1, 'hi'], [1, 'hi', True] ]   
+The Block, The Value, Previous Values, New Value  
+
+"Coins"  
+[ [1.3], [1.3, 0.5], [1.3, 0.5, 0.65] ]  
+
+### Functions
+
+Define Code wich is executed Later (and possibly Multiple Times)  
+
+    def greet():
+        print('Hello')
+    greet()
+    greet()
+
+Can receive Arguments
+
+    def greet(name):
+        print('Hello ' + name)
+    greet('Max')
+
+Can return Values
+
+    def sum(a, b):
+        return a + b
+    print(sum(2, 5))
+
+Default Arguments
+
+    def greet(name, age=29):
+        print('Hello ' + name + ', I am ' + age)
+    greet('Max')
+
+
+keyword Arguments (kwargs)
+
+    def greet(name, age):
+        print('Hello ' + name + ' I am' + age)
+
+    greet(age=29, name='Max')
 
 
