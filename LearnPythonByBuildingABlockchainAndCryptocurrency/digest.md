@@ -217,4 +217,37 @@ Follow **PEP 8** Code Style
 
 ## Section 3: Working with Loops & Conditionals
 
+## Loops & Conditionals
+Repeat & Check
+
+### Module Overview
+- Loops - for and while
+- Conditional Statements (if)
+- Boolean Operators
+- Controlling Loops
+
+### What about the Blockchain
+
+- Verify our Blockchain
+- Create a User Input Interface
+
+### Loops
+
+#### For
+    for elements in list:
+        print(element)
+
+A for Loop allows you to iterae trough **the elements of an Iterable** (e.g. a List)  
+**Changing** the Iterable as part of the Loop is **NOT** recommended  
+
+#### while
+    while True:
+        print('Infinity')
+
+A while Loop allows you to repeat code as long as its **condition is True**  
+Make sure to provide an exit condition,  **otherwise CTRL + Z** has to be used
+
+
+
+
 
