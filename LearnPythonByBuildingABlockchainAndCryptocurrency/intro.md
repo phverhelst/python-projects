@@ -30,6 +30,10 @@ Use riche set of third-party packages
 Gather, import and clean data  
 Do statistical analyses, plotting, machine learning  
 
+
+
+
+
 ### What's a Blockchain?
 
 A distributed **data storage** consisting of **containers** (blocks) wich are **connected**.  
@@ -99,122 +103,17 @@ Works with Strings
 50  
 Works with Strings  
 #### Division /
-5/10  
-0.5  
+47/10  
+4.7  
 Float  
 #### Floor Division //
-5 // 10  
-0
+47 // 10  
+4
 #### Exponentation **
 5 ** 10  
 9765625
 #### Modulus %
-5 % 10  
-5
-
-### Lists
-
-index   0   1   2   3  
-[ "some text",  12.9,   True,   ["nested!", 8]  ]  
-length = 4  
-
-### Our Blockchain
-
-The Chain
-[ [1], [1, 'hi'], [1, 'hi', True] ]   
-The Block, The Value, Previous Values, New Value  
-
-"Coins"  
-[ [1.3], [1.3, 0.5], [1.3, 0.5, 0.65] ]  
-
-### Functions
-
-Define Code wich is executed Later (and possibly Multiple Times)  
-
-    def greet():
-        print('Hello')
-    greet()
-    greet()
-
-Can receive Arguments
-
-    def greet(name):
-        print('Hello ' + name)
-    greet('Max')
-
-Can return Values
-
-    def sum(a, b):
-        return a + b
-    print(sum(2, 5))
-
-Default Arguments
-
-    def greet(name, age=29):
-        print('Hello ' + name + ', I am ' + age)
-    greet('Max')
-
-keyword Arguments (kwargs)
-
-    def greet(name, age):
-        print('Hello ' + name + ' I am' + age)
-    greet(age=29, name='Max')
-
-### Variable Scope
-
-Global
-
-    name = 'Max'
-    def greet():
-        print('Hi ' + name)
-    greet()
-
-Local  
-
-    name = 'Max'
-    def greet()
-        age = '29'
-        print('Hi ' + name + ', I am ' + age )
-    greet()
-
-### Understanding Python Syntax
-
-**Indentation** structure Code  
-Block statements nedd a **:**  
-Functions defined with **def**  
-Follow **PEP 8** Code Style  
-
-### Module Summary
-
-#### Data Types
-- **Numbers** (Integers & Floats)
-- **Strings**
-- **Booleans**
-
-#### Operators
-- **Base Arithmetic:** +, -, *, /  
-- **Modulus:** % (15 % 10 = 5)
-- **Floor Division:** // (15 // 10 = 1)
-- **Power:** ** ( 2 ** 3 = 8)
-- **Strings** can be **added** and **multiplied** (with integers)
-
-#### Lists
-- **Create** Lists
-- **Add Items** via append()
-- Access Items **via Index** (wich **starts at 0!**)
-- Other List Operations (pop(), ...)
-
-#### Functions
-- Use **Indentations** and: **:** to define Code Block
-- Can use **Arguments**
-- Can **return** Values
-- Can use **Default Arguments**
-- **Keyword Arguments** allow you to re-order or skip arguments
-
-#### Scope
-- **Global:** Variables defined outside of Functions
-- **Local:** Variables defined inside of Functions
-
-## Section 3: Working with Loops & Conditionals
+47 % 10  
+7
 
 
