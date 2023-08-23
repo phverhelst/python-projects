@@ -247,7 +247,44 @@ A for Loop allows you to iterae trough **the elements of an Iterable** (e.g. a L
 A while Loop allows you to repeat code as long as its **condition is True**  
 Make sure to provide an exit condition,  **otherwise CTRL + Z** has to be used
 
+#### if-else
 
+    User Input
+        "Max"
+            create_user()
+        ""
+            empty()
+
+### Booleans
+#### True or False  
+True
+False
+#### Used in Conditional Checks (if)
+#### Result from Boolean Operators
+==  
+!=  
+>=  
+<=  
+is  
+in  
+>  
+<  
+
+#### if-elif-else
+
+    User Iput
+        if
+            "Max"
+                create_user()
+            ""
+                empty()
+        elif
+            "M"
+                too_short()
+
+### Loops
+
+use **break** to **exit the Loop** before it's finished
 
 
 
