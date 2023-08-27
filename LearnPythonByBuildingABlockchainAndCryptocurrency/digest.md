@@ -217,16 +217,16 @@ Follow **PEP 8** Code Style
 
 ## Section 3: Working with Loops & Conditionals
 
-## Loops & Conditionals
+### Loops & Conditionals
 Repeat & Check
 
-### Module Overview
+#### Module Overview
 - Loops - for and while
 - Conditional Statements (if)
 - Boolean Operators
 - Controlling Loops
 
-### What about the Blockchain
+#### What about the Blockchain
 
 - Verify our Blockchain
 - Create a User Input Interface
@@ -270,7 +270,7 @@ in
 >  
 <  
 
-#### if-elif-else
+### if-elif-else
 
     User Iput
         if
