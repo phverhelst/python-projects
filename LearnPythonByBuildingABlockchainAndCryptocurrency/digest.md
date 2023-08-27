@@ -1,5 +1,4 @@
 # Learn Python by Building a Blockchain and Cryptocurrency
-
 ## Section 1: Getting Started
 
 
@@ -36,8 +35,7 @@ A distributed **data storage** consisting of **containers** (blocks) wich are **
 
 ### What's a Cryptocurrency?
 
-If the data you store in a block is a **list of transactions**, the coins transferred in the the transaction form your cryptocurrency.  
-
+If the data you store in a block is a **list of transactions**, the coins transferred in the the transaction form your cryptocurrency.
 ## Section 2: Diving Into the Basics of Python
 
 ### The REPL
@@ -215,6 +213,16 @@ Follow **PEP 8** Code Style
 - **Global:** Variables defined outside of Functions
 - **Local:** Variables defined inside of Functions
 
+### Blochain Status
+- Chain of Data **Basic Implementation**
+- Mine new Blocks **Basic Implementation**
+- Block Hashing **Basic Implementation**
+- Analyze & Verify Chain
+- Real Transaction
+- Store Chain to Disk
+- Node Network
+- Share Data, Resolve Conflicts
+- Wallets
 ## Section 3: Working with Loops & Conditionals
 
 ### Loops & Conditionals
@@ -286,5 +294,48 @@ in
 
 use **break** to **exit the Loop** before it's finished
 
+#### There is no switch-case Staement
+
+### Manipulating the Blockchain
+Edit Transaction  
+Invalid Previous Hash
+### Checking Our Blockchain
+    [1], 3.5
+        [[[1], 3.5], 5.8]
+            [[[[1], 3.5], 5.8], 1.0]
+
+Does the value contain the LAST value as a First Element?
+
+#### There is no for ( i = 0; i < 10; i++) Loop !
+#### But there's range()
+
+### Module Summary
+#### Loops
+- **for:** Loop trough List (Iterable) Elements
+- **while:** Loop as long as Condition is True
+#### if-elif-else
+- **if:** Check wether a certain **Condition** is Fulfilled
+- **else:** Execute Code in Case Condition is **NOT Fulfilled**
+- **elif:** Permform an **additional check** in case Condition is NOT Fulfilled
+#### Boolean Operators
+- **==:** Are two Values Equal?
+- **!=:** Are two Values NOT Equal?
+- **>:** Is Value 1 greater than Value 2?
+- **<:** Is Value 1 lower than Value 2?
+- **>=:** Is Value 1 greater or equal than Value 2?
+- **<=:** Is Value 1 lower or equal than Value 2?
+- **is:** Is Value True?
+- **not:** Is Value NOT True?
+### Blochain Status
+- Chain of Data **Basic Implementation**
+- Mine new Blocks **With User Interface**
+- Block Hashing **Basic Implementation**
+- Analyze & Verify Chain **Basic Implementation**
+- Real Transaction
+- Store Chain to Disk
+- Node Network
+- Share Data, Resolve Conflicts
+- Wallets
+## Section 4: Understanding Complex Data Structures
 
 
