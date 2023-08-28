@@ -269,14 +269,14 @@ True
 False
 #### Used in Conditional Checks (if)
 #### Result from Boolean Operators
-==  
-!=  
->=  
-<=  
-is  
-in  
->  
-<  
+    ==
+    !=
+    >=
+    <=
+    is
+    in
+    >
+    <
 
 ### if-elif-else
 
@@ -337,5 +337,58 @@ Does the value contain the LAST value as a First Element?
 - Share Data, Resolve Conflicts
 - Wallets
 ## Section 4: Understanding Complex Data Structures
+### Beyond Lists, Numbers, Strings & Booleans
+### Module Overview
+- Tuples, Sets & Dictionaries
+- Iterable Function & Behaviors
+- List Comprehensions
+- By Reference vs By value
+### What about the Blockchain
+- Send Transactions from A to B
+- Outstanding Transactions & Mining
+### A Transaction
+sender  
+recipient  
+amount  
+- We need a data structure wich stores key-values pairs, order doesn't matter
+- we need a data structure wich stores a mutable (editable) list of values, order doesn't matter
+- We need a data structure wich stores a mutable (editable) list of values, order does matter
+#### Mining a new Block
+### A Block
+- Hash
+- Index
+- Transactions
+### Managing a List of Participants
+
+    sender      Max     Chris   Manuel
+    recipient   Annal   Manuel  Max
+    amount      3.5     5.0     8.9
+
+    Sender & Recipients
+        Max
+        Anna
+        Chris
+        Manuel
+Should only be included once !  
+We need a data structure wich stores unique values, order doesn't matter
+
+## Iterables Overview
+
+    List    ['Milk', 'Honey', 'Milk']
+    
+Mutable, ordered list, duplicates allowed, mostly only one type
+
+    Set     {'Milk', 'Honey'}
+
+Mutable, **unorderd** list, **no duplicates**, mostly only one type
+
+    Tuple   ('Milk', 'Honey')
+
+** Immutable**, **ordered** list, **duplicates allowed**, often **mixed types**
+
+    Dictionary  {'name': 'Milk', 'n': 2}
+
+Mutable, **unordered map**, **no duplicate keys**, often mixed types
+
 
 
