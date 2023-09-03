@@ -390,5 +390,11 @@ Mutable, **unorderd** list, **no duplicates**, mostly only one type
 
 Mutable, **unordered map**, **no duplicate keys**, often mixed types
 
+### List Comprehensions
+1 2 3 4 5 6  
+2 4 6 8 10 12  
+Use a for-Loop
+Use a List Comprehension
+
 
 
