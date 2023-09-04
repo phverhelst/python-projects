@@ -396,5 +396,10 @@ Mutable, **unordered map**, **no duplicate keys**, often mixed types
 Use a for-Loop
 Use a List Comprehension
 
-
+### A new Way of Validating Blocks
+    Hash                            Hash                Hash
+    Index                           Index               Index
+    Transaction                     Transaction         Transaction
+    Max-Manu-0.5-Chris-Anna-0.3     Manu-Stephen-12     
+    
 
