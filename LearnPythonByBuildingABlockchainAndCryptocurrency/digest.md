@@ -402,4 +402,23 @@ Use a List Comprehension
     Transaction                     Transaction         Transaction
     Max-Manu-0.5-Chris-Anna-0.3     Manu-Stephen-12     
     
+### Adding a Mining Reward
+
+### By Reference vs By Value
+
+    my_list = A B C D E F
+    dup_list = my_list
+    dup_list Refers to A B C D E F
+    dup_list = my_list The list is not copied!
+    dup_list[0] = Z
+    dup_list = Z B C D E F
+    my_list = Z B C D E F
+Because the **Reference** is copied, **NOT the Value**!
+
+### There is Way to Copy a List Though
+my_list = A B C E F
+dup_list = my_list[:] This return a new List
+dup_list[0] = Z
+dup_list = Z B C D E F
+my_list = A B C D E F
 
